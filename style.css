@@ -1,0 +1,186 @@
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    Font-size: 13px;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.card {
+    background-color: white;
+    width: 330px;
+    height: 518px;
+    margin: 75px auto;
+    border-radius: 12px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.card__img {
+    background: url("./images/drawers.jpg");
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position-y: -20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card__content h1 {
+    color: var(--Very-Dark-Grayish-Blue);
+    margin: 30px 30px 12px;
+    font-size: 1.24em;
+    line-height: 24px;
+}
+
+.card__content p {
+    color: var(--Desaturated-Dark-Blue);
+    margin: 20px 30px 50px;
+    font-size: 1em;
+    line-height: 20px;
+}
+
+.card__content__icon {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+    padding: 6px 6px;
+    z-index: 1;
+}
+
+.card__content__icon:hover {
+    cursor: pointer;
+    background-color: var(--Desaturated-Dark-Blue);
+}
+
+.card__content__icon:hover path {
+    fill: white;
+}
+
+.card__content__profile {
+    display: flex;
+    margin: 0 30px;
+}
+
+.card__content__profile__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.card__content__profile__name {
+    color: var(--Very-Dark-Grayish-Blue);
+    margin: 4px 0px 2px 15px;
+    font-weight: 700;
+}
+
+.card__content__profile__date {
+    margin-left: 15px;
+    color: var(--Grayish-Blue);
+}
+
+.card__content__profile__social-icons {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    display: none;
+    gap: 5px;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.card__content__profile__social-icons__share {
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+    letter-spacing: 4px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.card__content__profile__social-icons__icon {
+    margin: 0 4px;
+}
+.show{
+    display: flex;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* DESKTOP */
+
+@media (min-width: 745px) {
+    .card {
+        margin-top: 270px auto 75px;
+        width: 735px;
+        height: 280px;
+        display: flex;
+       
+    }
+
+    .card__img {
+        height: 100%;
+        background-position-y: unset;
+        border-radius: 12px 0 0 12px;
+    }
+
+    .card__content {
+        padding: 10px 30px 10px 20px;
+    }
+
+    .card__content h1 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        line-height: 26px;
+    }
+
+    .card__content p{
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    .card__content__icon{
+        right: 50px;
+        bottom: 30px;
+    }
+    .card__content__profile__social-icons{
+        width: 250px;   
+        height: 56px;
+        bottom: 80px;
+        right: -40px;
+        border-radius: 8px;
+    }
+    .card__content__profile__social-icons::after{
+        content: "";
+        border: 10px solid ;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent;
+        position: absolute;
+        left: 132px;
+        top: 100%;
+    }
+
+}
